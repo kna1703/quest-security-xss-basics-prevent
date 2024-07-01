@@ -40,18 +40,20 @@
     </div>
 
     <script>
-
         const input = document.getElementById("token-question");
         const log = document.getElementById("token-answer");
-
+  
         input.addEventListener("input", updateValue);
-
+  
         function updateValue(e) {
-            log.innerHTML = e.target.value;
+          const textNode = document.createTextNode(e.target.value);
+  
+          log.innerHTML = "";
+  
+          log.appendChild(textNode);
         }
-
-    </script>
-
-</body>
+      </script>
+    </body>
+    &lt;script&gt;...&lt;/script&gt;
 
 </html>
